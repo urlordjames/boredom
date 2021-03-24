@@ -38,7 +38,7 @@ func load_game() -> void:
 	save_file.open(file_loc, File.READ)
 	var contents: String = save_file.get_as_text()
 	save_file.close()
-	
+
 	var save_data = parse_json(contents)
 	player_path = int(save_data["path"])
 
