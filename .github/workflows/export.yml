@@ -1,0 +1,23 @@
+name: "export"
+
+on: ["push", "pull_request"]
+
+jobs:
+  export:
+    runs-on: "ubuntu-latest"
+    container: "barichello/godot-ci:3.2.2"
+    
+    steps:
+    - uses: "actions/checkout@v2"
+    
+    - name: "setup export"
+      run: "mkdir -p ~/build/windows ~/.local/share/godot/templates && mv /root/.local/share/godot/templates/3.2.2.stable ~/.local/share/godot/templates/3.2.2.stable"
+    
+    - name: "export project"
+      run: "godot --export \"Windows Desktop\" ~/build/windows/game.exe"
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+    
+    - uses: "actions/upload-artifact@v2"
+      with:
+        name: "windows"
+        path: "~/build/windows/game.exe"
