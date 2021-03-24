@@ -14,6 +14,8 @@ jobs:
             output_name: "game.exe"
           - build: "Linux_X11"
             output_name: "game.x86_64"
+          - build: "Mac OSX"
+            output_name: "game.zip"
     
     steps:
     - uses: "actions/checkout@v2"
