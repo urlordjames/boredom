@@ -9,7 +9,11 @@ jobs:
 
     strategy:
       matrix:
-        build: ["Windows Desktop"]
+        include:
+          - build: "Windows Desktop"
+            output_name: "game.exe"
+          - build: "Linux_X11"
+            output_name: "game.x86_64"
     
     steps:
     - uses: "actions/checkout@v2"
@@ -18,7 +22,7 @@ jobs:
       run: "mkdir -p ~/build ~/.local/share/godot/templates && mv /root/.local/share/godot/templates/3.2.2.stable ~/.local/share/godot/templates/3.2.2.stable"
     
     - name: "export project"
-      run: "godot --export \"${{matrix.build}}\""
+      run: "godot --export \"${{matrix.build}}\" ~/build/${{matrix.output_name}}"
       working-directory: ${{env.GITHUB_WORKSPACE}}
     
     - uses: "actions/upload-artifact@v2"
