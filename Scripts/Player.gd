@@ -100,3 +100,6 @@ func jump() -> void:
 
 func movement() -> void:
 	pass
+
+func djump() -> void:
+	pass
