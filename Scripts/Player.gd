@@ -71,9 +71,7 @@ func _physics_process(delta: float):
 	var friction: float = default_friction
 	var speed: float = default_speed
 
-	if is_on_floor():
-		coyote_time = default_coyote_time
-	else:
+	if not is_on_floor():
 		friction = .95
 		speed = 50
 		coyote_time -= delta
@@ -88,6 +86,9 @@ func _physics_process(delta: float):
 	camera.fov = 80 + (sqrt(pow(velocity.x, 2) + pow(velocity.z, 2)) / 10)
 
 	velocity = move_and_slide(velocity, Vector3.UP)
+
+	if is_on_floor():
+		coyote_time = default_coyote_time
 
 	if translation.y < -50:
 		print_debug("sorry about that")
