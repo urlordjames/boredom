@@ -5,10 +5,6 @@ class_name AirPath
 func _ready():
 	default_speed = 165
 	default_coyote_time = INF
-
-func jump():
-	coyote_time = 0
-	velocity.y = 15
 	
 func djump():
 	move_cooldown = default_move_cooldown
