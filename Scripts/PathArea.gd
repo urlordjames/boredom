@@ -3,7 +3,9 @@ extends Area
 # workaround for godot export enum bug
 enum paths {
 	PATH_NONE,
-	PATH_FIRE
+	PATH_FIRE,
+	PATH_WATER,
+	PATH_AIR
 }
 
 export(paths) var path = paths.PATH_FIRE
