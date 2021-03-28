@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "KinematicBody",
+"class": "AirPath",
+"language": "GDScript",
+"path": "res://Scripts/AirPlayer.gd"
+}, {
+"base": "KinematicBody",
 "class": "FirePath",
 "language": "GDScript",
 "path": "res://Scripts/FirePlayer.gd"
@@ -18,10 +23,17 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://Scripts/Player.gd"
+}, {
+"base": "KinematicBody",
+"class": "WaterPath",
+"language": "GDScript",
+"path": "res://Scripts/WaterPlayer.gd"
 } ]
 _global_script_class_icons={
+"AirPath": "",
 "FirePath": "",
-"Player": ""
+"Player": "",
+"WaterPath": ""
 }
 
 [application]
