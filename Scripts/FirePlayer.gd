@@ -2,7 +2,7 @@ extends "res://Scripts/Player.gd"
 
 class_name FirePath
 
-func _ready():
+func _init():
 	default_speed = 165
 
 func movement():
