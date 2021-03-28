@@ -15,6 +15,8 @@ onready var head_basis: Basis = head.get_global_transform().basis
 export var default_coyote_time: float = 0.1
 var coyote_time: float = 0
 
+export var default_jump_strength: float = 15
+
 export var default_move_cooldown: float = 0.5
 var move_cooldown: float = 0
 
@@ -97,7 +99,7 @@ func _physics_process(delta: float):
 
 func jump() -> void:
 	coyote_time = 0
-	velocity.y = 15
+	velocity.y = default_jump_strength
 
 func movement() -> void:
 	pass
