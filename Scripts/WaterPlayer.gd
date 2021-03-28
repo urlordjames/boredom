@@ -3,4 +3,4 @@ extends "res://Scripts/Player.gd"
 class_name WaterPath
 
 func _ready():
-	default_speed = 220
+	default_speed = 250
