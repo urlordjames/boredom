@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/Textures/grass texture ingame.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Textures/grass.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/PathArea.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Materials/BasicParticle.tres" type="Material" id=4]
 
