@@ -91,4 +91,4 @@ secondary_fire={
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://Assets/Materials/default_env.tres"
