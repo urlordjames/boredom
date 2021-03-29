@@ -9,7 +9,7 @@ func _ready():
 var hasdjump: bool = true
 
 func jump() -> void:
-	velocity.y = max(velocity.y, 0) + 15
+	velocity.y = max(velocity.y, 0) + default_jump_strength
 	if hasdjump:
 		hasdjump = false
 	else:
