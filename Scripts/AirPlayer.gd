@@ -6,7 +6,12 @@ func _init():
 	default_speed = 165
 	default_coyote_time = INF
 	
-func djump():
-	move_cooldown = default_move_cooldown
-	if is_on_floor() == false:
-		jump()
+var hasdjump: bool = true
+
+func jump() -> void:
+	velocity.y = max(velocity.y, 0) + default_jump_strength
+	if hasdjump:
+		hasdjump = false
+	else:
+		coyote_time = 0
+		hasdjump = true
