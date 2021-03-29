@@ -1,6 +1,14 @@
 extends Area
 
-export(Global.paths) var path = Global.paths.PATH_FIRE
+# workaround for godot export enum bug
+enum paths {
+	PATH_NONE,
+	PATH_FIRE,
+	PATH_WATER,
+	PATH_AIR
+}
+
+export(paths) var path = paths.PATH_FIRE
 var path_script: Script = load(Global.path_scripts[path])
 
 func _on_body_entered(body: Node):

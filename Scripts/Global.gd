@@ -16,11 +16,9 @@ const path_scripts = {
 
 var player_path: int = paths.PATH_NONE
 
-# workaround for godot export enum bug (https://github.com/godotengine/godot/issues/14681)
-var p = null
+const p = preload("res://Scenes/Player.tscn")
 
 func _ready():
-	p = preload("res://Scenes/Player.tscn")
 	get_tree().set_auto_accept_quit(false)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	load_game()
