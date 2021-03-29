@@ -2,7 +2,7 @@ extends "res://Scripts/Player.gd"
 
 class_name AirPath
 
-func _ready():
+func _init():
 	default_speed = 165
 	default_coyote_time = INF
 	
