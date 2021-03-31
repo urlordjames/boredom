@@ -57,6 +57,9 @@ func _input(event: InputEvent):
 
 	if move_cooldown <= 0 and event.is_action_pressed("movement"):
 		movement()
+	
+	if event.is_action_pressed("primary_fire"):
+		primary()
 
 func _physics_process(delta: float):
 	head_basis = head.get_global_transform().basis
@@ -102,4 +105,7 @@ func jump() -> void:
 	velocity.y = default_jump_strength
 
 func movement() -> void:
+	pass
+	
+func primary() -> void:
 	pass
