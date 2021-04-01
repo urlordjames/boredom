@@ -28,7 +28,6 @@ func _ready():
 		call_deferred("load_new_path", desired_path)
 
 func load_new_path(path: Script) -> void:
-	print_debug("loading new path")
 	var inst: Player = Global.p.instance()
 	inst.set_script(path)
 	get_tree().get_root().add_child(inst)
