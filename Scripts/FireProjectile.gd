@@ -8,6 +8,8 @@ const delta_radius: float = (start_radius - end_radius) / frames_visible
 onready var mesh: MeshInstance = $LaserMesh
 onready var cylinder: CylinderMesh = CylinderMesh.new()
 
+const material: Material = preload("res://Assets/Materials/FireBeam.tres")
+
 func shoot():
 	force_raycast_update()
 
@@ -16,6 +18,7 @@ func shoot():
 	cylinder.bottom_radius = 0.1
 	cylinder.radial_segments = 8
 	cylinder.rings = 1
+	cylinder.material = material
 
 	var dist: float = -cast_to.z
 
