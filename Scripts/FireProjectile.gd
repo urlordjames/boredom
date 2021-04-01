@@ -24,6 +24,8 @@ func shoot():
 		enemy.damage(50)
 		dist = global_transform.origin.distance_to(get_collision_point())
 
+	enabled = false
+
 	mesh.transform.origin.z = -dist / 2
 	cylinder.height = dist
 
