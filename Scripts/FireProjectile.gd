@@ -30,7 +30,7 @@ func shoot():
 	cylinder.height = dist
 
 	# yield to ensure mesh gets drawn
-	for i in range(0, frames_visible):
+	for _i in range(frames_visible):
 		yield(get_tree(), "idle_frame")
 		cylinder.top_radius -= delta_radius
 		cylinder.bottom_radius -= delta_radius
