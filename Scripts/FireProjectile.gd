@@ -14,6 +14,8 @@ func shoot():
 	mesh.mesh = cylinder
 	cylinder.top_radius = 0.1
 	cylinder.bottom_radius = 0.1
+	cylinder.radial_segments = 8
+	cylinder.rings = 1
 
 	var dist: float = -cast_to.z
 
