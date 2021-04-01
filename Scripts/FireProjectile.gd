@@ -3,6 +3,6 @@ extends RayCast
 func shoot():
 	force_raycast_update()
 	if is_colliding():
-		var target = get_collider()
-		print_debug(target.name)
+		var enemy: Enemy = get_collider().get_parent()
+		enemy.damage(50)
 	queue_free()
