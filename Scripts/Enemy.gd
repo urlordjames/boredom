@@ -8,9 +8,12 @@ var health = base_health
 func damage(amount: int) -> bool:
 	health -= amount
 	if health <= 0:
-		queue_free()
+		die()
 		return true
 	return false
+
+func die() -> void:
+	queue_free()
 
 func restore() -> void:
 	health = base_health
