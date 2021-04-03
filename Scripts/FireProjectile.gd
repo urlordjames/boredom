@@ -14,8 +14,8 @@ func shoot():
 	force_raycast_update()
 
 	mesh.mesh = cylinder
-	cylinder.top_radius = 0.1
-	cylinder.bottom_radius = 0.1
+	cylinder.top_radius = start_radius
+	cylinder.bottom_radius = start_radius
 	cylinder.radial_segments = 8
 	cylinder.rings = 1
 	cylinder.material = material
