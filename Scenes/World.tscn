@@ -103,5 +103,9 @@ draw_pass_1 = SubResource( 11 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1, -22 )
 path = 3
 
+[node name="PathArea4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.9537, 1, -22 )
+path = 4
+
 [node name="Dummy" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )

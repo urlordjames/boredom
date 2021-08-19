@@ -4,14 +4,16 @@ enum paths {
 	PATH_NONE,
 	PATH_FIRE,
 	PATH_WATER,
-	PATH_AIR
+	PATH_AIR,
+	PATH_EARTH
 }
 
 const path_scripts = {
 	paths.PATH_NONE: "res://Scripts/Player.gd",
 	paths.PATH_FIRE: "res://Scripts/FirePlayer.gd",
 	paths.PATH_WATER: "res://Scripts/WaterPlayer.gd",
-	paths.PATH_AIR: "res://Scripts/AirPlayer.gd"
+	paths.PATH_AIR: "res://Scripts/AirPlayer.gd",
+	paths.PATH_EARTH: "res://Scripts/EarthPlayer.gd"
 }
 
 var player_path: int = paths.PATH_NONE

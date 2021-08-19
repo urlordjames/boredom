@@ -1,6 +1,6 @@
 extends "res://Scripts/Player.gd"
 
-class_name AirPath
+class_name EarthPath
 
 func _init():
 	default_speed = 165
@@ -8,6 +8,10 @@ func _init():
 	
 var hasdjump: bool = true
 
+func movement() -> void:
+	coyote_time = 0
+	velocity.y = default_jump_strength
+	
 func jump() -> void:
 	velocity.y = default_jump_strength
 	# is_on_floor() prevents double jump if player is currently falling
@@ -16,10 +20,7 @@ func jump() -> void:
 	else:
 		coyote_time = 0
 		hasdjump = true
+		velocity.x = 0
+		velocity.z = 0
+		velocity.y = -20
 
-const projectile = preload("res://Scenes/AirBlast.tscn")
-
-func primary():
-	var inst = projectile.instance()
-	get_tree().get_root().add_child(inst)
-	inst.global_transform = camera.global_transform
