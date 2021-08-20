@@ -5,7 +5,8 @@ enum paths {
 	PATH_NONE,
 	PATH_FIRE,
 	PATH_WATER,
-	PATH_AIR
+	PATH_AIR,
+	PATH_EARTH
 }
 
 export(paths) var path = paths.PATH_FIRE

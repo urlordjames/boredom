@@ -15,6 +15,11 @@ _global_script_classes=[ {
 "path": "res://Scripts/AirPlayer.gd"
 }, {
 "base": "KinematicBody",
+"class": "EarthPath",
+"language": "GDScript",
+"path": "res://Scripts/EarthPlayer.gd"
+}, {
+"base": "KinematicBody",
 "class": "Enemy",
 "language": "GDScript",
 "path": "res://Scripts/Enemy.gd"
@@ -36,6 +41,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "AirPath": "",
+"EarthPath": "",
 "Enemy": "",
 "FirePath": "",
 "Player": "",
